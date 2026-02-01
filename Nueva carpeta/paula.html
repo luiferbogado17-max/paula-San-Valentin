@@ -1,0 +1,125 @@
+
+ <!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Para Paula 💕</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 25px;
+  text-align: center;
+  width: 90%;
+  max-width: 360px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+  animation: pop 0.8s ease;
+}
+
+@keyframes pop {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+h1 {
+  color: #ff5e78;
+}
+
+h2 {
+  color: #ff5e78;
+}
+
+p {
+  color: #555;
+  font-size: 16px;
+}
+
+.frase {
+  font-style: italic;
+  margin-top: 10px;
+}
+
+button {
+  border: none;
+  padding: 12px 25px;
+  font-size: 16px;
+  border-radius: 30px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.yes {
+  background: #ff5e78;
+  color: white;
+}
+
+.no {
+  background: #ffc1cc;
+  color: #333;
+}
+
+img {
+  width: 100%;
+  border-radius: 20px;
+  margin-top: 15px;
+}
+
+.hidden {
+  display: none;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+  <h1>Paula… ¿quieres ser mi San Valentín? 💕</h1>
+
+  <div id="buttons">
+    <button class="yes" onclick="yes()">Sí 💖</button>
+    <button class="no" onclick="no()">No 😳</button>
+  </div>
+
+  <div id="yes" class="hidden">
+    <h2>Mi respuesta favorita 🥹❤️</h2>
+    <p class="frase">
+      Desde que llegaste, todo tiene más sentido.<br>
+      No eres parte de mi vida…<br>
+      <strong>eres mi vida entera.</strong>
+    </p>
+    
+    <p class="frase">Gracias por elegirme todos los días 💖</p>
+  </div>
+
+  <div id="no" class="hidden">
+    <h2>Ups 😅</h2>
+    <p>Esa opción no existe… intenta otra vez, amor 💕</p>
+  </div>
+</div>
+
+<script>
+function yes(){
+  document.getElementById("buttons").style.display = "none";
+  document.getElementById("yes").classList.remove("hidden");
+}
+
+function no(){
+  document.getElementById("buttons").style.display = "none";
+  document.getElementById("no").classList.remove("hidden");
+}
+</script>
+
+</body>
+</html>
